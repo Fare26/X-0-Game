@@ -1,0 +1,101 @@
+body {
+    font-family: 'Architects Daughter', cursive;;
+    background-color: rgb(87, 131, 76);
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.wrapper {
+    width: 500px;
+    margin: auto;
+}
+
+.wrapper h1 {
+    font-size: 60px;
+    color: #dac617;
+    margin-top: 0;
+}
+
+.wrapper p {
+    font-size: 24px;
+    color: #ccc;
+    font-weight: 400;
+}
+
+.wrapper h1, .wrapper p {
+    text-align: center;
+}
+
+.reset {
+    border: none;
+    background-color: #dac617;
+    padding: 10px 20px;
+    font-size: 20px;
+    width: 100%;
+    color: #fff;
+    font-weight: 800;
+    border-radius: 25px;
+}
+
+.reset:hover {
+    cursor: pointer;
+    opacity: 0.73;
+}
+
+.game {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,130px);
+}
+
+.field {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 80px;
+    /*padding: 9px 54px;*/
+    color: #ccc;
+    user-select: none;
+    padding-top: 3%;
+    padding-left: 33%;
+}
+
+#player {
+    color: #dac617;
+    font-weight: 800;
+    font-size: 26px;
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        width: 300px;
+    }
+    .game {
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(3,calc(300px / 3));
+    }
+
+    .wrapper h1 {
+        font-size: 43px;
+    }
+
+    .field {
+        font-size: 45px;
+        padding-top: 15%;
+    }
+
+    #player {
+        font-size: 24px;
+    }
+
+    #game-score {
+        font-size: 20px;
+    }
+}
